@@ -10,6 +10,7 @@ const defaultOptions = {
   cleanBuildDir: true,
   cleanPackageDir: true,
   overlays: ['./package/**', './README.md', 'LICENSE'],
+  packageFile: './package/package.json',
   buildSequence: null
 };
 
