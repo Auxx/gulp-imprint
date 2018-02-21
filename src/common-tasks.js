@@ -1,3 +1,5 @@
+const del = require('del');
+
 function create(gulp, options) {
   gulp.task('imprint:clean', () => {
     if (options.cleanBuildDir) {

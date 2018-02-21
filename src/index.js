@@ -13,10 +13,9 @@ const defaultOptions = {
 
 function imprint(gulp, options) {
   const opts = Object.assign({}, defaultOptions, options);
-  console.log(opts);
 
-  // commonTasks(gulp, opts);
-  // packageTasks(gulp, opts);
+  commonTasks(gulp, opts);
+  packageTasks(gulp, opts);
 }
 
 module.exports = imprint;
