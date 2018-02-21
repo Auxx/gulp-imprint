@@ -8,7 +8,7 @@ const defaultOptions = {
   packageDir: './dist/package',
   cleanBuildDir: true,
   cleanPackageDir: true,
-  overlays: ['./package/**', './README.md']
+  overlays: ['./package/**', './README.md', 'LICENSE']
 };
 
 function imprint(gulp, options) {
