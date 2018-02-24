@@ -2,7 +2,6 @@
   "name": "gulp-imprint",
   "version": "0.0.0",
   "description": "Set of configurable gulp tasks to release and publish nodejs apps and libraries",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +11,8 @@
   },
   "author": "Aleksandr 'Aux' Ivanov <aux@hexmode.org> (http://hexmode.org/)",
   "license": "BSD-2-Clause",
-  "devDependencies": {
+  "dependencies": {
+    "any-shell-escape": "^0.1.1",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-bump": "^3.1.0",
