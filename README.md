@@ -72,6 +72,23 @@ This set of tasks is also CI friendly as you can use them to automate your workf
 gulp-imprint itself is using this process to publish itself to npm. Please take a look at project structure
 to understand it better.
 
+## Available tasks
+
+* `imprint:patch`, `imprint:minor`, `imprint:major` - creates a new release and publishes it by running the following sequence of tasks:
+  `imprint:release:X`, `imprint:package`, `imprint:npm:publish`.
+* `imprint:package` - creates a package by running the following sequence of tasks:
+  `imprint:clean`, `imprint:package:build`, `imprint:package:prepare`, `imprint:package:overlay`.
+* `imprint:clean` - cleans build and package output directories.
+* `imprint:package:prepare` - prepares package output directory by copying contents of build directory.
+* `imprint:package:overlay` - copies overlay files and directories over contents inside package directory.
+* `imprint:package:build` - runs build tasks as specified by configuration (`buildSequence`).
+* `imprint:npm:publish` - runs `$ npm publish` inside package output folder.
+* `imprint:bump:major`, `imprint:bump:minor`, `imprint:bump:patch` - bumps package version according to semver rules.
+* `imprint:release:patch`, `imprint:release:minor`, `imprint:release:major` - creates a release by running the sequence of tasks:
+  `imprint:release:git:X`, `imprint:bump:X`, `imprint:release:git:X`.
+* `imprint:release:git:prepare` - prepares repository for release by switching to `master` branch and pulling latest changes.
+* `imprint:release:git:tag` - commits `package.json` changes, creates a new tag and pushes everything to `origin`.
+
 ## Configuration
 
 The following structure describes possible configuration options and their default values:
