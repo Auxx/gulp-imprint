@@ -2,6 +2,7 @@ const commonTasks = require('./common-tasks');
 const packageTasks = require('./package-tasks');
 const npmTasks = require('./npm-tasks');
 const bumpTasks = require('./bump-tasks');
+const releaseTasks = require('./release-tasks');
 
 const defaultOptions = {
   buildDir: './dist/out',
@@ -20,6 +21,7 @@ function imprint(gulp, options) {
   packageTasks(gulp, opts);
   npmTasks(gulp, opts);
   bumpTasks(gulp, opts);
+  releaseTasks(gulp, opts);
 }
 
 module.exports = imprint;
