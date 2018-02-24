@@ -1,3 +1,5 @@
+const runSequence = require('run-sequence');
+
 function create(gulp, options) {
   gulp.task(
     'imprint:patch',
