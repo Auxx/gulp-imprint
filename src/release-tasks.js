@@ -59,7 +59,23 @@ function create(gulp, options) {
       'imprint:release:git:prepare',
       'imprint:bump:patch',
       'imprint:release:git:tag',
-      done))
+      done));
+
+  gulp.task(
+    'imprint:release:minor',
+    done => runSequence(
+      'imprint:release:git:prepare',
+      'imprint:bump:minor',
+      'imprint:release:git:tag',
+      done));
+
+  gulp.task(
+    'imprint:release:major',
+    done => runSequence(
+      'imprint:release:git:prepare',
+      'imprint:bump:major',
+      'imprint:release:git:tag',
+      done));
 }
 
 module.exports = create;
