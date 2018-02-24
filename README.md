@@ -107,6 +107,14 @@ The following structure describes possible configuration options and their defau
 };
 ```
 
+## Basic usage
+
+Just run one of the `imprint:X` tasks where X is either `major`, `minor` or `patch`:
+
+```
+$ gulp imprint:minor
+```
+
 ## Skip publishing to npm
 
 If your project should not be published to npm registry (for example, you're building end-user application, not a library)
