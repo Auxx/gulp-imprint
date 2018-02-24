@@ -11,7 +11,9 @@ const defaultOptions = {
   cleanPackageDir: true,
   overlays: ['./package/**', './README.md', 'LICENSE'],
   packageFile: './package/package.json',
-  buildSequence: null
+  buildSequence: null,
+  dryRun: false,
+  commitPrefix: 'Version '
 };
 
 function imprint(gulp, options) {
