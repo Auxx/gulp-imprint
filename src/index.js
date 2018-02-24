@@ -1,5 +1,3 @@
-'use strict';
-
 const commonTasks = require('./common-tasks');
 const packageTasks = require('./package-tasks');
 const npmTasks = require('./npm-tasks');
