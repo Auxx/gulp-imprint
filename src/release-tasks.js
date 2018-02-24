@@ -11,16 +11,6 @@ const shellCommands = {
 };
 
 function create(gulp, options) {
-  /*
-   * +1. Switch to master
-   * +2. Pull
-   * 3. Bump
-   * 4. Add + Commit
-   * 5. Create tag
-   * 6. Push tag
-   * 7. Push master
-   */
-
   gulp.task('imprint:release:git:prepare', async () => {
     if (options.dryRun) {
       console.log(shellCommands.checkout);
