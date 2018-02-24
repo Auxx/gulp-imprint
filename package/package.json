@@ -7,5 +7,14 @@
   "homepage": "http://hexmode.org/",
   "license": "BSD-2-Clause",
   "main": "index.js",
-  "repository": "github:Auxx/gulp-imprint"
+  "repository": "github:Auxx/gulp-imprint",
+  "dependencies": {
+    "any-shell-escape": "^0.1.1",
+    "del": "^3.0.0",
+    "gulp-bump": "^3.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "peerDependencies": {
+    "gulp": "~3.0"
+  }
 }
