@@ -1,6 +1,7 @@
 const exec = require('./gulp-exec');
 const runSequence = require('run-sequence');
 const escape = require('any-shell-escape');
+const path = require('path');
 
 const shellCommands = {
   checkout: 'git checkout master',
@@ -31,7 +32,7 @@ function create(gulp, options) {
   });
 
   gulp.task('imprint:release:git:tag', async () => {
-    const version = require(options.packageFile).version;
+    const version = require(path.join(process.cwd(), options.packageFile)).version;
     const versionMessage = options.commitPrefix + version;
     const addCmd = `git add ${escape(options.packageFile)}`;
     const commitCmd = `git commit -m "${versionMessage}"`;
