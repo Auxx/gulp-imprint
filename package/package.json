@@ -1,7 +1,7 @@
 {
   "name": "gulp-imprint",
   "description": "Set of configurable gulp tasks to release and publish nodejs apps and libraries",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Aleksandr 'Aux' Ivanov <aux@hexmode.org> (http://hexmode.org/)",
   "keywords": ["gulp", "package", "release", "publish"],
   "homepage": "http://hexmode.org/",
